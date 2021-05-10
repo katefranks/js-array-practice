@@ -7,8 +7,28 @@
 
 
 
+// myFunction('sunshine', 3) => ['sunshine', 'sunshine', 'sunshine'];
+
+// window.alert("hi");
+
+function newArray(str, i) {
+  var myArray = [];
+
+  for (let j = 1; j <= i ; j++){
+    // for (let j = 0; j < i ; j++){
+    myArray.push(str);
+  }
+  return myArray;
+}
+
+console.log(newArray("hi", 3));
 
 
+
+
+
+// const arr = [ ];
+// // console.log(arr);
 
 
 
