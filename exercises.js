@@ -43,7 +43,7 @@ function reverseArray(arr) {
     return result;
 }
 
-console.log(reverseArray([1,2,3,4,5]));
+// console.log(reverseArray([1,2,3,4,5]));
 
 
 
@@ -60,12 +60,15 @@ console.log(reverseArray([1,2,3,4,5]));
 
 
 
+function byeFalsy(arr) {
+  return arr.filter(function(value){
+    if (value){
+      return (value);
+    }
+  });
+}
 
-
-
-
-
-
+console.log(byeFalsy([2, 3, 0, NaN, 4, false, 5]));
 
 // -----------------------------------------------
 
