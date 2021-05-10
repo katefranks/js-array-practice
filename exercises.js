@@ -68,7 +68,7 @@ function byeFalsy(arr) {
   });
 }
 
-console.log(byeFalsy([2, 3, 0, NaN, 4, false, 5]));
+// console.log(byeFalsy([2, 3, 0, NaN, 4, false, 5]));
 
 // -----------------------------------------------
 
@@ -80,11 +80,26 @@ console.log(byeFalsy([2, 3, 0, NaN, 4, false, 5]));
 
 // Put your answer below -------------------------
 
+// const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+// const obj = Object.fromEntries(arr);
+// console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 
+// person[] = arr[]; // {0: ['name', 'kate']}
+//   const key = arr[i][0];
+//   const value = arr[i][1];
 
 
+function objCreator(arr) {
+  var person = Object.fromEntries(arr);
+  for (let i = 0; i < arr.length; i++) {
 
+  }
+
+  return person;
+}
+
+console.log(objCreator([['name', 'kate'] , ['age','33'], ['pet', 'Dulce']]));
 
 
 
