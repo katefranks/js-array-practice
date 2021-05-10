@@ -21,15 +21,7 @@ function newArray(str, i) {
   return myArray;
 }
 
-console.log(newArray("hi", 3));
-
-
-
-
-
-// const arr = [ ];
-// // console.log(arr);
-
+// console.log(newArray("hi", 3));
 
 
 
@@ -43,9 +35,15 @@ console.log(newArray("hi", 3));
 
 // Put your answer below -------------------------
 
+function reverseArray(arr) {
+  const result = [ ];
+  for (let i=arr.length - 1; i >= 0; i --) {
+    result.push(arr[i]);
+  }
+    return result;
+}
 
-
-
+console.log(reverseArray([1,2,3,4,5]));
 
 
 
