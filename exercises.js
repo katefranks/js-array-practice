@@ -23,7 +23,27 @@ function newArray(str, i) {
 
 // console.log(newArray("hi", 3));
 
+// function myFunction(str,i) {
+//   const result = [];
+//   for (let j = 0; j <i; j++) {
+//     result.push(str);
+//   }
+//   return result;
+// }
 
+// *****Another way to solve
+
+const myFunction = function(str, i) {
+  return Array.from({length: i}), function() {
+    return str;
+  });
+}
+// to call function needs myfunction()
+const myFunction() = function(str, i) {
+  return Array.from({length: i}), function() {
+    return str;
+  });
+}
 
 
 // -----------------------------------------------
@@ -45,8 +65,22 @@ function reverseArray(arr) {
 
 // console.log(reverseArray([1,2,3,4,5]));
 
+// ******another solution
+function reverseArray(arr){
+  const result = [];
+  for(let i = 0 i < arr.length; i++) {
+    result.unshift(arr[i]);
+  }
+  return result;
+}
 
-
+// to count up instead
+// for(let i = arr.length; i > 0; i--) {
+//   result.push(arr[i]);
+// }
+// return result;
+// }
+// unshift gets added to font of array
 
 
 
@@ -59,13 +93,24 @@ function reverseArray(arr) {
 // Put your answer below -------------------------
 
 
-
 function byeFalsy(arr) {
   return arr.filter(function(value){
     if (value){
       return (value);
     }
   });
+}
+
+// ****another solution
+
+function removeFalsyValues(arr) {
+  const result = [];
+  for(let i=0; i <arr.length; i++) {
+    if (arr[i]) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
 }
 
 // console.log(byeFalsy([2, 3, 0, NaN, 4, false, 5]));
@@ -101,7 +146,25 @@ function objCreator(arr) {
 
 // console.log(objCreator([['name', 'kate'] , ['age','33'], ['pet', 'Dulce']]));
 
+// ******another solution
 
+function createObj1(arr) {
+  const result = {};
+
+  for(let i = 0; i<arr.length; i++) {
+    result[arr[i][0]] = arr[[i][1]];
+
+// ******below breaks out the above to make it easier to read, but is the same
+    // let arr = arr[i]; // ['name', 'Charlie']
+    // let key = nestedArr[0];
+    // let value = nestedArray [1];
+    //
+    // result[key] = value;
+
+    // result ['name'] = 'charlie';
+  }
+  return result;
+}
 
 
 // -----------------------------------------------
@@ -112,6 +175,32 @@ function objCreator(arr) {
 // ---------------------
 
 // Put your answer below -------------------------
+
+
+ // USING A SET********
+
+function removeDuplicates(arr) {
+
+// ****or could do below to write it out
+// const set = new Set (arr);
+// return [...set];
+
+  return [...new Set(arr)];
+}
+
+
+// ******another solution
+
+
+
+function removeDuplicates(arr) {
+  const obj = {};
+
+  for(let i=0; i< arr.length; i++) {
+    obj [arr[i]] = arr[i];
+  }
+  return Array.from(Object.values(obj));
+}
 
 // *******NEED TO COME BACK TO THIS ONE!!****
 
@@ -172,6 +261,54 @@ function objCreator(arr) {
 // ---------------------
 
 // Put your answer below -------------------------
+
+
+
+function compareArrays (arr1, arr2) {
+  if(arr1.length !== arr2.length) {
+    return false;
+  }
+  arr1.sort(function(a, b) {
+    return a-b;
+  });
+  arr2.sort(function(a, b){
+    return a-b;
+  });
+
+  for(let i = 0; i < arr1.length; i++) {
+    if(arr1[i] !== arr2[i]){
+      return false;
+    }
+  }
+  return true;
+}
+
+// Call back function needs to be passed in in order to sort values as numbers and not as strings:
+
+function compareArrays (arr1, arr2) {
+  if(arr1.length !== arr2.length) {
+    return false;
+  }
+
+arr1.sort();
+arr2.sort();
+
+  // arr1.sort(function(a, b) {
+  //   return a-b;
+  // });
+  // arr2.sort(function(a, b){
+  //   return a-b;
+  // });
+
+  for(let i = 0; i < arr1.length; i++) {
+    if(arr1[i] !== arr2[i]){
+      return false;
+    }
+  }
+  return true;
+}
+
+
 
 // ******NEED TO COME BACK TO THIS ONE-IN 1ST ATTEMPT ALL RETURN FALSE, IN LAST ATTEMPT, ALL RETURN TRUE.
 
