@@ -2,7 +2,15 @@
 // THE SOUL OF WIT: REVERSE AN ARRAY
 // https://www.codewars.com/kata/59b81886460387d8fc000043
 
+function reverseArray(arr) {
+  const result = [ ];
+  for (let i=arr.length - 1; i >= 0; i --) {
+    result.push(arr[i]);
+  }
+    return result;
+}
 
+// This function console.logs correctly w/o errors, so I need to figure out why it's not passing on Codewars.com
 
 
 // # 2
