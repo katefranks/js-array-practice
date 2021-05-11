@@ -99,7 +99,7 @@ function objCreator(arr) {
   return person;
 }
 
-console.log(objCreator([['name', 'kate'] , ['age','33'], ['pet', 'Dulce']]));
+// console.log(objCreator([['name', 'kate'] , ['age','33'], ['pet', 'Dulce']]));
 
 
 
@@ -113,12 +113,51 @@ console.log(objCreator([['name', 'kate'] , ['age','33'], ['pet', 'Dulce']]));
 
 // Put your answer below -------------------------
 
+// *******NEED TO COME BACK TO THIS ONE!!****
+
+// function noDuplicates(arr) {
+//   const values = new Set();
+//   {
+//     return values;
+//   }
+// }
+//
+// console.log(noDuplicates([1,2,3,4,5,4,3]));
+
+// function noDuplicates(arr) {
+//
+//   let chars = [ ];
+//   let uniqueChars = [...new Set(chars)];
+//   for (let i = 0; i < arr.length; i++) {
+//     return uniqueChars;
+//   }
+// }
+//
+//
+// console.log(noDuplicates([1,2,3,4,5,4,3]));
 
 
+// function noDuplicates(arr) {
+// let myArray = [ ];
+// let newArray = Array.from(new Set(myArray));
+// for (let i = 0; i < arr.length; i++) {
+//   newArray.add(myArray[i])
+// }
+//   return newArray;
+// }
+//
+//
+// console.log(noDuplicates([1,2,3,4,5,4,3]));
 
+// *******NEED TO COME BACK TO THIS ONE!! - this is returning an empty array
+// function noDuplicates(){
+//   let myArray = [ ];
+//   let orderedArray = Array.from(new Set(myArray)); {
+//     return orderedArray;
+//   }
+// }
 
-
-
+// console.log(noDuplicates([1,2,3,4,5,4,3]));
 
 
 
@@ -134,8 +173,40 @@ console.log(objCreator([['name', 'kate'] , ['age','33'], ['pet', 'Dulce']]));
 
 // Put your answer below -------------------------
 
+// ******NEED TO COME BACK TO THIS ONE-IN 1ST ATTEMPT ALL RETURN FALSE, IN LAST ATTEMPT, ALL RETURN TRUE.
+
+// function identicalArrs(arr1, arr2){
+//   let array1= [ ];
+//   let array2= [ ];
+//
+//   if (arr1 === arr2) {
+//     return true;
+//   }
+//
+// }
+//
+// // console.log(identicalArrs([1,2,3,4] ,[1,2,3,4]));
+// console.log(identicalArrs([1,2,3,4,5] ,[1,2,3,4]));
 
 
+
+// function identicalArrs(arr1, arr2){
+//   var array1 = [];
+//   var array2 = [];
+//
+//   if(array1.sort().join(',')=== array2.sort().join(',')){
+//       return true;
+//   }
+//   else {
+//     return false;
+//   }
+//
+// }
+//
+// console.log(identicalArrs([1,2,3,4] ,[1,2,3,4]));
+// console.log(identicalArrs([1,2,3,4,5] ,[1,2,3,4]));
+// console.log(identicalArrs([1,2,3,4] ,[1,2,3,4,4]));
+// console.log(identicalArrs([1,2,3,4] ,[1,4,3,2]));
 
 
 
