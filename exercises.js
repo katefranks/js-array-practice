@@ -62,24 +62,24 @@ function reverseArray(arr) {
   }
     return result;
 }
-
+// console.log(reverseArray(['k', 'a','t', 'e']));
+    // arr.length = 4
+    // i = 3   first iteration
+    // result = [ 'e', 't', 'a', 'k' ]
 // console.log(reverseArray([1,2,3,4,5]));
+//The push() method adds one or more elements to the end of an array and returns the new length of the array.
+
 
 // ******another solution
 function reverseArray(arr){
   const result = [];
-  for(let i = 0 i < arr.length; i++) {
+  for(let i = 0; i < arr.length; i++) {
     result.unshift(arr[i]);
   }
   return result;
 }
+// The unshift method inserts the given values to the beginning of an array-like object.
 
-// to count up instead
-// for(let i = arr.length; i > 0; i--) {
-//   result.push(arr[i]);
-// }
-// return result;
-// }
 // unshift gets added to font of array
 
 
@@ -100,6 +100,15 @@ function byeFalsy(arr) {
     }
   });
 }
+//The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+// refactor using => sytax:
+
+// refactor
+function byeFelicia(arr) {
+  return arr.filter(value => value);
+}
+// console.log(byeFelicia([2, 3, 0, NaN, 4, false, 5]));
 
 // ****another solution
 
@@ -143,7 +152,7 @@ function objCreator(arr) {
 
   return person;
 }
-
+//The Object.fromEntries() method transforms a list of key-value pairs into an object.
 // console.log(objCreator([['name', 'kate'] , ['age','33'], ['pet', 'Dulce']]));
 
 // ******another solution
@@ -178,6 +187,14 @@ function createObj1(arr) {
 
 
  // USING A SET********
+
+     // Use to remove duplicate elements from the array:
+
+    // const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
+    //
+    // console.log([...new Set(numbers)])
+
+    // [2, 3, 4, 5, 6, 7, 32]
 
 function removeDuplicates(arr) {
 
@@ -262,7 +279,7 @@ function removeDuplicates(arr) {
 
 // Put your answer below -------------------------
 
-
+//The sort() method sorts the elements of an array in place and returns the sorted array.
 
 function compareArrays (arr1, arr2) {
   if(arr1.length !== arr2.length) {
